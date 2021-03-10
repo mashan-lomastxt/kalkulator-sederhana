@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtjudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silahkan Masukkan Angka"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/txt_angkapertama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Angka Pertama"
+        android:fontFamily="casual"
+        android:textStyle="italic"
+        android:inputType="number"
+        android:layout_below="@id/txtjudul"
+        />
+
+    <EditText
+        android:id="@+id/txt_angkakedua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Angka Kedua"
+        android:fontFamily="casual"
+        android:textStyle="italic"
+        android:inputType="number"
+        android:layout_below="@id/txt_angkapertama"
+        />
+    
+    <LinearLayout
+        android:id="@+id/btnoperator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_angkakedua"
+        android:orientation="horizontal"
+    >
+
+        <Button
+            android:id="@+id/btn_tambah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:onClick="tambah"
+            android:text="+"
+            android:textColor="@color/black"
+            app:backgroundTint="#F8DD02"
+            />
+
+        <Button
+            android:id="@+id/btn_kurang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:onClick="kurang"
+            android:text="-"
+            android:textColor="@color/black"
+            app:backgroundTint="#F8DD02"
+            />
+
+        <Button
+            android:id="@+id/btn_bagi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:onClick="bagi"
+            android:text="/"
+            android:textColor="@color/black"
+            app:backgroundTint="#F8DD02"
+            />
+
+        <Button
+            android:id="@+id/btn_kali"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="kali"
+            android:text="x"
+            android:textColor="@color/black"
+            app:backgroundTint="#F8DD02"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtperhitungan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil Perhitungan :"
+        android:textSize="30dp"
+        android:layout_below="@+id/btnoperator"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/txt_hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="50dp"
+        android:layout_below="@+id/txtperhitungan"
+        android:layout_centerHorizontal="true"
+
+        />
+
+</RelativeLayout>
